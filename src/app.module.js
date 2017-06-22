@@ -8,30 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var core_2 = require("@angular/core");
-var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
-var AngularFooAppComponent = (function () {
-    function AngularFooAppComponent() {
+var app_component_1 = require("./app.component");
+var AppModule = (function () {
+    function AppModule() {
     }
-    return AngularFooAppComponent;
+    return AppModule;
 }());
-AngularFooAppComponent = __decorate([
-    core_2.Component({
-        selector: 'angularfoo-app',
-        template: '<h1>Angular Foo</h1>'
-    })
-], AngularFooAppComponent);
-var AngularFooAppModule = (function () {
-    function AngularFooAppModule() {
-    }
-    return AngularFooAppModule;
-}());
-AngularFooAppModule = __decorate([
+AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [AngularFooAppComponent],
-        bootstrap: [AngularFooAppComponent]
+        declarations: [app_component_1.AppComponent],
+        bootstrap: [app_component_1.AppComponent]
     })
-], AngularFooAppModule);
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(AngularFooAppModule);
-//# sourceMappingURL=app.js.map
+], AppModule);
+exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map
