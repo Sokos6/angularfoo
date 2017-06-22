@@ -9,13 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.message = 'Data Binding in Angular';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'display-data-app',
-        template: '<h1>Data Binding in Angular - Interpolation Syntax</h1>'
+        template: '<h1>{{message}}</h1>'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
