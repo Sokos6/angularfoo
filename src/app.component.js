@@ -9,14 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.message = 'Data Binding in Angular';
+        this.message = 'Angular - Event Binding';
     }
+    AppComponent.prototype.showMessage = function (onKeyPressEvent) {
+        this.message = onKeyPressEvent.target.value;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'display-data-app',
-        template: '<h1>{{message}}</h1>'
+        selector: 'event-binding-app',
+        template: "\n        <h1>{{message}}</h1>\n\t\t<input type=\"text\" [value]=\"message\"(keypress)=\"showMessage()\" />\n        "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

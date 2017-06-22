@@ -1,9 +1,16 @@
 import { Component } from '@angular/core'; 
 
       @Component({ 
-        selector: 'display-data-app', 
-        template: '<h1>{{message}}</h1>' 
+        selector: 'event-binding-app', 
+        template: `
+        <h1>{{message}}</h1>
+		<input type="text" [value]="message"(keypress)="showMessage()" />
+        `
       }) 
       export class AppComponent {
-      	message: string = 'Data Binding in Angular';
+      	public message: string = 'Angular - Event Binding';
+
+      	showMessage(onKeyPressEvent) {
+      		this.message = onKeyPressEvent.target.value;
+      	}
       }
